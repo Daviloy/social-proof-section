@@ -1,0 +1,230 @@
+@font-face {
+    font-family: "Spartan Regular";
+    font-weight: 400;
+    src: url("./fonts/Spartan-Regular.ttf");
+}
+
+@font-face {
+    font-family: "Spartan Bold";
+    font-weight: 700;
+    src: url("./fonts/Spartan-Bold.ttf");
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    font-family: "Spartan Regular";
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 1.7em;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    line-height: 1.3em;
+    margin: 1rem 0;
+}
+
+p {
+    margin: 1rem 0;
+}
+
+.App {
+    background: url("./images/bg-pattern-bottom-desktop.svg") no-repeat bottom
+        right;
+}
+
+.container {
+    margin: auto;
+    max-width: 1440px;
+    padding: 20px 130px;
+}
+
+.SocialProof__Section {
+    background: url("./images/bg-pattern-top-desktop.svg") no-repeat top left;
+}
+
+/* Header */
+.Header {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+}
+
+.Header__Text {
+    padding: 50px 0;
+}
+
+.Header__Text h2 {
+    font-family: "Spartan Bold", sans-serif;
+    color: hsl(300, 43%, 22%);
+    font-size: 40px;
+}
+
+.Header__Text p {
+    color: hsl(303, 10%, 53%);
+}
+
+/* Ratings */
+.Ratings {
+    padding: 50px 10px;
+}
+
+.Rating {
+    background-color: hsl(300, 24%, 96%);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 15px;
+    max-width: 500px;
+}
+
+.Rating:nth-child(2) {
+    margin-left: 50px;
+}
+
+.Rating:nth-child(3) {
+    margin-left: 100px;
+}
+
+.Rating p {
+    color: hsl(300, 43%, 22%);
+    font-family: "Spartan Bold", sans-serif;
+    font-weight: bold;
+}
+
+.Rating__Icons {
+    margin-right: 25px;
+}
+
+.Rating__Icons img {
+    margin-right: 10px;
+}
+
+/* Testimonials */
+.Testimonials {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 30px;
+    align-items: flex-start;
+    margin-top: 20px;
+    margin-bottom: 35px;
+    z-index: 1;
+}
+
+.Testimonial {
+    background-color: hsl(300, 43%, 22%);
+    border-radius: 10px;
+    color: hsl(0, 0%, 100%);
+    padding: 30px;
+}
+
+.Testimonial:nth-child(2) {
+    margin-top: 25px;
+}
+
+.Testimonial:nth-child(3) {
+    margin-top: 50px;
+}
+
+.Testimonial__Header {
+    display: flex;
+    align-items: center;
+}
+
+.Testimonial__Header img {
+    border-radius: 50%;
+    width: 60px;
+}
+
+.Testimonial__Info {
+    margin-left: 20px;
+}
+
+.Testimonial__Info h4 {
+    color: hsl(333, 80%, 67%);
+    font-size: 14px;
+    letter-spacing: 1px;
+}
+
+@media (max-width: 1170px) {
+    .container {
+        padding: 20px 65px;
+    }
+
+    .Testimonials {
+        grid-gap: 15px;
+    }
+}
+
+@media (max-width: 1015px) {
+    .container {
+        padding: 20px 40px;
+    }
+}
+
+@media (max-width: 940px) {
+    .Header {
+        grid-template-columns: 1fr;
+    }
+
+    .Header__Text {
+        padding: 10px;
+        text-align: center;
+    }
+
+    .Ratings {
+        margin-bottom: 40px;
+        padding: 10px;
+    }
+
+    .Rating {
+        max-width: 100%;
+    }
+
+    .Rating:nth-child(2),
+    .Rating:nth-child(3) {
+        margin-left: 0;
+    }
+
+    .Testimonials {
+        grid-template-columns: 1fr;
+    }
+
+    .Testimonial:nth-child(2),
+    .Testimonial:nth-child(3) {
+        margin-top: 0;
+    }
+}
+
+@media (max-width: 768px) {
+    .Header__Text h2 {
+        font-size: 35px;
+    }
+}
+
+@media (max-width: 560px) {
+    .Rating {
+        flex-direction: column;
+        padding: 10px 0;
+    }
+
+    .Rating p {
+        margin: 0.5rem 0;
+    }
+}
+
+@media (max-width: 400px) {
+    .container {
+        padding: 20px;
+    }
+}
